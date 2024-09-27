@@ -1,0 +1,19 @@
+data_dir: "/var/lib/vector/"
+
+sources:
+  my_source:
+    type: "stdin"  
+  
+transforms:
+  my_transform:
+    type: "remap"  
+    inputs: ["my_source"]
+    source: |
+      .level = "info"  
+
+sinks:
+  my_sink:
+    type: "console"  
+    inputs: ["my_transform"]  
+    encoding:
+      codec: "json" 
