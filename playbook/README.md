@@ -55,5 +55,4 @@ The playbook includes error handling to manage failures gracefully:
 - The database creation command will not fail if the database already exists (checks for error code 82).
 
 ## Templates
-- templates/vector.toml.j2: Template for the Vector configuration file.
-- templates/vector.service.j2: Template for the Vector systemd service file.
+- templates/vector.yml.j2: Template for the Vector configuration file.
